@@ -96,7 +96,6 @@ public class ConfigTest {
 
         ProcessState.EventAndException e = process.checkOrWaitForEvent(ProcessState.PROCESS_STATE.INIT_FAILURE);
         assertNotNull(e);
-        System.out.println(e.exception.getMessage());
         TestCase.assertEquals(e.exception.getMessage(),
                 "'postgresql_user' is not set in the config.yaml file. Please set this value and restart SuperTokens");
 
